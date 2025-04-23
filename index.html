@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO LIST - Smart Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1><i class="fas fa-leaf"></i> TO-DO LIST</h1>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </header>
+        
+        <div class="task-stats">
+            <div class="stat-item">
+                <span class="stat-label">Pending</span>
+                <span class="stat-value" id="pendingTasks">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Completed</span>
+                <span class="stat-value" id="completedTasks">0</span>
+            </div>
+        </div>
+
+        <div class="todo-input">
+            <div class="input-wrapper">
+                <input type="text" id="taskInput" placeholder="What's on your mind?">
+                <div class="priority-selector">
+                    <button class="priority-btn" data-priority="low">
+                        <i class="fas fa-angle-down"></i>
+                    </button>
+                    <button class="priority-btn" data-priority="medium">
+                        <i class="fas fa-equals"></i>
+                    </button>
+                    <button class="priority-btn" data-priority="high">
+                        <i class="fas fa-angle-up"></i>
+                    </button>
+                </div>
+            </div>
+            <button id="addTask" class="pulse-animation">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="todo-list" id="todoList">
+            <!-- Tasks will be added here dynamically -->
+        </div>
+
+        <div class="motivation-quote">
+            "Small progress is still progress"
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
